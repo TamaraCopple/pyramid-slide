@@ -1,0 +1,24 @@
+.header {
+    background-color: #00e6ac;
+    border-style: solid;
+    border-color: #004d39;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #001a13;
+    }
+.pybox {
+        border-style: solid;
+        border-color: #004d39;
+    }
+.selectors {
+    background-color: #00e6ac;
+    line-height: 2em;
+    color: #001a13;
+    }
+/*placeholder txt below */
+#pyramid {
+    background-color: #e6fff9;
+    color: #001a13;
+    text-align: center;
+}

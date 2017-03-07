@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="pyramid-slide.js"></script>
+    <title>Pyramid Slider</title>
+</head>
+<body>
+    <div class = "header">
+        <h1>Pyramid Slide</h1>
+    </div>
+
+    <div class = "pybox">
+        <div class ="selectors">
+        <form>
+            <label> Brick Symbol
+                <select name='dropdown' type='select'>
+                    <option value="X">X</option>
+                    <option value="@">@</option>
+                    <option value="#">#</option>
+                    <option value="$">$</option>
+                </select>
+            </label>
+        <label> &nbsp; &nbsp; </sp></sp>How high?
+            <input type="range" id="slide" value="1" min="0" max="10" oninput="drawPyramid(this.value)" onchange="pyramidHeight.value = slide.value">
+            <output id="pyramidHeight">10</output>
+        </label>
+    </form>
+    </div>
+    <div id = "pyramid">
+        <p>placeholder text</p>
+    </div>
+    </div>
+
+</body>
+</html>

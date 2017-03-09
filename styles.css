@@ -13,12 +13,16 @@
     }
 .selectors {
     background-color: #00e6ac;
-    line-height: 2em;
+    line-height: 4em;
     color: #001a13;
+    padding-left: 25px;
     }
 /*placeholder txt below */
 #pyramid {
     background-color: #e6fff9;
     color: #001a13;
-    text-align: center;
+    text-align: right;
+    padding-right: 15em;
+
+
 }

@@ -1,22 +1,25 @@
 function drawPyramid(height) {
-
-    // first, clear the old content
     document.getElementById("pyramid").innerHTML = "";
 
-    // for each row....
+    //beginning w/row # =  0, where the row # is less than the hight,
+    //and incrementing by one each iteration,
     for (var row = 0;
         row < height;
         row++)
         {
-        // figure out number of bricks and spaces
-        var numBricks = row + 2;
+        // number of bricks to use is the row # +1
+        var numBricks = row + 1;
+        // number of spaces is total height - row # - 1
         var numSpaces = height - row - 1;
 
-        // build up a string for this row
+        // the Hash is a string type.  So to begin, establish an empty string veriable.
         var rowStr = "";
+
+        // set I=0.  While I is less than the numSpaces variable in line 13,
+        //add a non-breaking space (&nbsp;) and increment by 1. Loop stopps when
+        //valua of I = value of numSpaces
         for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "&nbsp"; // this is the HTML encoding for a space " "
-            rowStr += spaceChar;
+            rowStr += "&nbsp;";
         }
         for (var i = 0; i < numBricks; i++) {
             rowStr += "#";
@@ -24,7 +27,10 @@ function drawPyramid(height) {
 
         // make a <p> element for this row, and insert it into the #pyramid container
         rowElem = document.createElement("p");
-        rowElem.innerHTML = rowStr;
+        rowElem.innerHTML = rowStr; //established on line 16 and appended throughout
+
+        //the .appendChild adds a paragraph tag containing the #s and spaces
+        //calculated earlier in the function.
         document.getElementById("pyramid").appendChild(rowElem);
     }
 };

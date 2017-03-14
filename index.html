@@ -16,7 +16,7 @@
         <div class ="selectors">
         <form>
             <label> Brick Symbol
-                <select name='dropdown' type='select'>
+                <select name="brickType" type='select' onchange="drawPyramid()">
                     <option value="X">X</option>
                     <option value="@">@</option>
                     <option value="#">#</option>
@@ -24,16 +24,15 @@
                 </select>
             </label>
         <label> &nbsp; &nbsp; </sp></sp>How high?
-            <input type="range" id="slide" value="1" min="0" max="25" oninput="drawPyramid(this.value)" onchange="pyramidHeight.value = slide.value">
-            <output id="pyramidHeight">25</output>
+            <input type="range" id="slide" value="1" min="0" max="25" oninput="drawPyramid()" >
+           <label id="pyramidHeight"></label>
         </label>
     </form>
     </div>
+    </div>
     <div id = "pyramid">
-        <!--script runs when encountered, so needs to be in the body HTML.-->
-        <script src="pyramid-slide.js"></script>
+        <!--  Container for pyramid -->
     </div>
-    </div>
-
+         <script src="pyramid-slide.js"></script>
 </body>
 </html>

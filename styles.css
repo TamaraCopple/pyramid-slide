@@ -8,8 +8,10 @@
     color: #001a13;
     }
 .pybox {
-        border-style: solid;
         border-color: #004d39;
+        border-left: solid;
+        border-right: solid;
+        border-top: solid;
     }
 .selectors {
     background-color: #00e6ac;
@@ -19,10 +21,17 @@
     }
 /*placeholder txt below */
 #pyramid {
+    text-align: right; 
     background-color: #e6fff9;
     color: #001a13;
-    text-align: right;
-    padding-right: 15em;
+    padding-top: 30px;
+    padding-right: 650px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    border-color: #004d39;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
 
 
 }

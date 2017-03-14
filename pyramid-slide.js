@@ -1,36 +1,45 @@
-function drawPyramid(height) {
+//height argument is defined above as a get element from "slide"
+function drawPyramid() {
+
+    var height = document.getElementById("slide").value;
+    var symbol = document.getElementsByName("brickType")[0].value;
+
+    //console.log(height);
+    //console.log(symbol);
+
     document.getElementById("pyramid").innerHTML = "";
 
-    //beginning w/row # =  0, where the row # is less than the hight,
-    //and incrementing by one each iteration,
-    for (var row = 0;
-        row < height;
-        row++)
+    for (var row = 0; row < height; row++)
         {
-        // number of bricks to use is the row # +1
-        var numBricks = row + 1;
-        // number of spaces is total height - row # - 1
-        var numSpaces = height - row - 1;
+            var numBricks = row + 2;
+            var numSpaces = height - row - 1;
+            var rowStr = "";
 
-        // the Hash is a string type.  So to begin, establish an empty string veriable.
-        var rowStr = "";
-
-        // set I=0.  While I is less than the numSpaces variable in line 13,
-        //add a non-breaking space (&nbsp;) and increment by 1. Loop stopps when
-        //valua of I = value of numSpaces
-        for (var i = 0; i < numSpaces; i++) {
+            for (var i = 0; i < numSpaces; i++) {
             rowStr += "&nbsp;";
         }
-        for (var i = 0; i < numBricks; i++) {
-            rowStr += "#";
+    for (var i = 0; i < numBricks; i++) {
+            rowStr += symbol  ; //  += appends to what is already there
         }
+        //console.log(rowStr);
 
-        // make a <p> element for this row, and insert it into the #pyramid container
+        // make a <p> element for this row, and insert it into the #pyramid area
         rowElem = document.createElement("p");
-        rowElem.innerHTML = rowStr; //established on line 16 and appended throughout
-
-        //the .appendChild adds a paragraph tag containing the #s and spaces
-        //calculated earlier in the function.
+        rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
-    }
-};
+
+        document.getElementById("pyramidHeight").innerHTML = height;
+}
+}
+
+
+
+//        var brickType = ""
+//        var sel = document.getElementById('sel');
+//        var opts = sel.options;
+//        for (var opt, j=0; opt = opts[j]; j++){
+//            if(opt.value==brickType)
+//            {sel.selectedIndex = j;
+//            break;}
+//        }
+//    }
